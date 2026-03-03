@@ -7,12 +7,23 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <canvas id="starfield"></canvas>
+
   <div class="container">
     <h1 class="title">Tic Tac Toe</h1>
 
+    <div class="mode-toggle">
+      <span class="mode-label">vs CPU</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="pvp-toggle" />
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="mode-label">vs Player</span>
+    </div>
+
     <div class="scoreboard">
       <div class="score-item">
-        <span class="score-label x-color">You (X)</span>
+        <span class="score-label x-color" id="label-x">You (X)</span>
         <span class="score-value" id="score-x">0</span>
       </div>
       <div class="score-item">
@@ -20,7 +31,7 @@
         <span class="score-value" id="score-draws">0</span>
       </div>
       <div class="score-item">
-        <span class="score-label o-color">CPU (O)</span>
+        <span class="score-label o-color" id="label-o">CPU (O)</span>
         <span class="score-value" id="score-o">0</span>
       </div>
     </div>
